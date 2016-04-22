@@ -8,7 +8,7 @@ public class stockAIMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*float t=1.0;11
+		/*float t=1.0;1111
 		float a=31253.3;
 		DecimalFormat df2 = new DecimalFormat("0.00");
 		t=(3125.3/(3.24*100));
