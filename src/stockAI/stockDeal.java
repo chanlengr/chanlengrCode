@@ -23,23 +23,34 @@ public class stockDeal {
 		
 		lastMoney=availableMoney-(int)buyAmount*stockPrice*100;  //剩余金额
 		
-		buyList.add(df2.format(availableMoney));	//当前总金额
+		buyList.add(df2.format(availableMoney));	//当前资金
 		buyList.add(df2.format(availableBuyMoney));//可购买的金额
 		buyList.add(df2.format(buyAmount));		//单位手
 		buyList.add(df2.format(costMount));		//花费金额
 		buyList.add(df2.format(lastMoney));		//剩余金额
 		
-		System.out.println(buyList);
+		//System.out.println(buyList);
 		
-		System.out.println("当前总金额:" + buyList.get(0) + "\n可以购买的金额:" + buyList.get(1) 
-		+ "\n买入手数: " + buyList.get(2)+ "\n花费: " + buyList.get(3) + "\n剩余金额:" +buyList.get(4));
+		System.out.println("当前资金:" + buyList.get(0) + "\n可以购买的金额:" + buyList.get(1) 
+		+ "\n买入手数: " + buyList.get(2)+ "\n花费: " + buyList.get(3) + "\n剩余可用资金:" +buyList.get(4));
 		
 		return buyList;
 		
 	}
-	public String stockSellCalc()
+	public static ArrayList<String> stockSellCalc(double availableMoney,double sellPercent,double stockPrice,double stockCount)
 	{
-		return null;
+		int sellAmount;
+		double lastMoney;
+		double getMoney;
+		sellAmount=(int) (stockCount*sellPercent);
+		getMoney=sellAmount*stockPrice;
+		lastMoney=availableMoney+sellAmount*stockPrice;
+		
+		
+		
+		
+		System.out.println("当前资金:" + availableMoney + "\n卖出手数" + sellAmount + "\n卖出获得金额:" + getMoney + "\n剩余可用资金:" + lastMoney);
+		return null; 
 	}
 
 }
